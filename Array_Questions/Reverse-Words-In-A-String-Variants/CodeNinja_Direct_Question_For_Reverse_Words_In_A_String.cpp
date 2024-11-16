@@ -1,5 +1,4 @@
 /* 
-
 Sample input 1:
 2
 when all else fails reboot
@@ -26,8 +25,6 @@ whitespace is never white
 Sample output 2:
 defects zero has code no
 white never is whitespace
-
-
 */
 #include<iostream>
 #include<vector>
