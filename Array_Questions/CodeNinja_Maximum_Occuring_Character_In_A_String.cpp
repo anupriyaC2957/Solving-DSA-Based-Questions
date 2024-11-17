@@ -1,3 +1,8 @@
+/*sentence: test --> output: t 
+sentence: anupriya --> output: a
+sentence: xxyyyx --> ouput: x
+sentence: yyxxxy --> output: y */
+
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
