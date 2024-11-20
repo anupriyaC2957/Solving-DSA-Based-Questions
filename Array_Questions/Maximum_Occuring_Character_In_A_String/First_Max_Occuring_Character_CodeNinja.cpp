@@ -29,7 +29,7 @@ char highestOccurringChar(char input[]) {
    
     unordered_map <char,int> ans; // unordered map --> iteration order is not fixed --> change can occur--> do not depend on the iteration order
     char finals;
-    char ch;
+    //char ch;
     int max= -1;
     int n = strlen(input);
 
