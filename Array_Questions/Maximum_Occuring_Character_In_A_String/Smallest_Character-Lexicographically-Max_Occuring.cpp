@@ -1,5 +1,6 @@
  /*sentence: test --> output: t 
  sentence: sampletest --> output: e
+ sentence: SampLETest --> output: e
  sentence: aabbb --> output: b
  sentence: yyxxxy --> output: x
  sentence: xxyyyx --> output: x
@@ -10,16 +11,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+char ToLower(char ch)  // non-Case-Sensitive
+{
+    if(ch>='a' && ch<= 'z')
+    {
+        return ch;
+    }
+    else
+    {
+        char temp;
+        temp = ch -'A'+'a';
+        return temp;
+    }
+}
+
 char highestOccurringChar(char input[]) {
    
     unordered_map <char,int> ans;
     char finals;
+    char ch;
     int max= -1;
     int n = strlen(input);
 
     for(int i=0; i<n; i++)
     {
-        ans[input[i]]++;   
+        ch = ToLower(input[i]);
+        ans[ch]++;   
     }
 
     for(auto it : ans )
