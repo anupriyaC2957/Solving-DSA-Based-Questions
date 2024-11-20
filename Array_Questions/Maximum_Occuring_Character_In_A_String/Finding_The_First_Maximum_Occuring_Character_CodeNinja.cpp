@@ -1,8 +1,9 @@
- /*sentence: test --> output: t 
+/*sentence: test --> output: t 
  sentence: sampletest --> output: s
  sentence: aabbb --> output: b
  sentence: yyxxxy --> output: y
  sentence: xxyyyx --> output: x
+ sentence: xxxyyy --> output: x 
  */
 
 #include<iostream>
