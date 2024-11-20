@@ -1,30 +1,49 @@
- /*sentence: test --> output: t 
+ /*
+ sentence: test --> output: t 
  sentence: sampletest --> output: t
+ sentence: SampLETest --> output: t
  sentence: aabbb --> output: b
  sentence: yyxxxy --> output: y
  sentence: xxyyyx --> output: x
  sentence: xxxyyy --> output: y
  */
 
+
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
+
+char ToLower(char ch)  // non-Case-Sensitive
+{
+    if(ch>='a' && ch<= 'z')
+    {
+        return ch;
+    }
+    else
+    {
+        char temp;
+        temp = ch -'A'+'a';
+        return temp;
+    }
+}
 
 char highestOccurringChar(char input[]) {
    
     unordered_map <char,int> ans;
     char finals;
+    char ch;
     int max= -1;
     int n = strlen(input);
 
     for(int i=n-1; i>=0; i--)
     {
-        ans[input[i]]++;   
+        ch= ToLower(input[i]);
+        ans[ch]++;   
     }
 
     for(int i=n-1;i>=0; i--)
     {
-        char current = input[i];
+        char current = ToLower(input[i]);
        // cout<<"character: "<<current<<endl;
         if(ans[current]> max)
         {
@@ -50,7 +69,7 @@ int main()
 
     int n = sentence.length();
     //cout<<" Value of n is: "<<n<<endl;
-    //cout<<" Value of n+1 is:"<<n+1<<endl;
+    cout<<" Value of n+1 is:"<<n+1<<endl;
 
     char s[n+1];
 
