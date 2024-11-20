@@ -45,8 +45,8 @@ int main()
     getline(cin, sentence);
 
     int n = sentence.length();
-    cout<<"value of n is: "<<n;
-    cout<<"Value of n+1 is:"<<n+1;
+    //cout<<"value of n is: "<<n<<endl;
+    //cout<<"Value of n+1 is:"<<n+1<<endl;
 
     char s[n+1];
 
