@@ -11,7 +11,6 @@ Enter the 2D Array: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
 RESULT-->
 The Wave Array: 1 5 9 13 14 10 6 2 3 7 11 15 16 12 8 4 
 
-
 */
 
 #include<iostream>
@@ -73,8 +72,6 @@ int main()
     {
         cout<<result[i]<<" ";
     }
-
-
 
     return 0;
 }
