@@ -1,3 +1,17 @@
+//LEETCODE: 
+/*
+
+You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+Input: 
+    [    [ 1,  2,  3 ],
+         [ 4,  5,  6 ],
+         [ 7,  8,  9 ]  ]
+Output: 
+    [    [ 7,  4,  1 ],
+         [ 8,  5,  2 ],
+         [ 9,  6,  3 ]  ]
+*/
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -7,12 +21,12 @@ using namespace std;
         int row= matrix.size();
         int col= matrix[0].size();
 
-        int s=0;
+        int s=0;      
         int e= row-1;
 
-        while(s<=e)
+        while(s<e)
         {
-            for(int j=0; j<col; j++)
+            for(int j=0; j<col; j++) // column wise compare --> between two fixed rows
             {
                 swap(matrix[s][j], matrix[e][j]); 
             }
@@ -58,13 +72,27 @@ int main()
     
     for(int i=0; i<matrix.size(); i++)
     {
+        cout<<"[ ";
         for(int j=0; j<matrix[0].size(); j++)
         {
-            cout<<matrix[i][j]<<" ";
+            if(j==(matrix[0].size()-1))
+            {
+               cout<<matrix[i][j]<<" "; 
+            }
+            else
+            {
+                cout<<matrix[i][j]<<" , ";
+            }
+
         }
+        
+        if(i==(matrix.size()-1))
+            cout<<"]";
+        else
+            cout<<"],";
+
         cout<<endl;
     }
 
     return 0;
-
 }
