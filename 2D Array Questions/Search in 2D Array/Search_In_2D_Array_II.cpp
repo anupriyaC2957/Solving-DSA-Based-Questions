@@ -1,4 +1,4 @@
-/* matrix is of m*n size:
+/* matrix is of m*n size: --> leetocde and code ninja 
 Input: matrix = 
 [[1   ,4   ,7  ,11  ,15],
  [2   ,5   ,8  ,12  ,19],
