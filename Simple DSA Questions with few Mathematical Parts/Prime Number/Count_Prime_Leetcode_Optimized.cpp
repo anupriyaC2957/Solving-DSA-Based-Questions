@@ -22,7 +22,7 @@ int countPrimes(int n)
 {
     int count =0;
 
-    vector<int> prime(n+1, 1); // +1 is additional incase -ve number exist 
+    vector<bool> prime(n+1, 1); // +1 is additional incase -ve number exist 
     vector<int> prime_numbers; //optional step
 
     prime[0] = prime[1]= 0;
