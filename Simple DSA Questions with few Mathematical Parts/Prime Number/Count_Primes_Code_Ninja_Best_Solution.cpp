@@ -29,7 +29,7 @@ using namespace std;
 
 vector<int> countPrimes(int n)
 {
-    vector<int> prime(n+1, 1);
+    vector<bool> prime(n+1, 1);
     vector<int> prime_numbers;
     vector<int> factors;
 
